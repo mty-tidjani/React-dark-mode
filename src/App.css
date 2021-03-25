@@ -1,3 +1,13 @@
+:root{
+ --app-bg: #282c34;
+ --txt-color: white
+}
+
+:root.dark{
+  --app-bg: #fff;
+  --txt-color: black;
+}
+
 .App {
   text-align: center;
 }
@@ -14,14 +24,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: var(--app-bg);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--txt-color);
 }
 
 .App-link {
@@ -35,4 +45,31 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.dark-switch {
+  position: relative;
+  display: inline;
+  width: 52px;
+  height: 26px;
+  margin: 15px;
+}
+
+input {
+  opacity: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 34px;
+  background-color: var(--txt-color);
+  font-size: 17px;
+  padding: 2px 3px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
